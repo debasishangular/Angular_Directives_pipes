@@ -1,0 +1,26 @@
+<nav
+  class="navbar navbar-expand-sm bg-dark"
+  style="background:ghostwhite;color:black">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <a class="navbar-brand" [routerLink]="['inbuilt']" 
+                                [routerLinkActive]="'active-link'">InBuilt Directives</a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-brand" [routerLink]="['attribute']" 
+                                [routerLinkActive]="'active-link'">Custom Attribute</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="navbar-brand" [routerLink]="['structural']" 
+                                [routerLinkActive]="'active-link'">Custom Structural</a>
+      </li>
+     
+      
+    </ul>
+  </div>
+</nav>
+<div class="outer-outlet">
+  <router-outlet></router-outlet>
+</div>

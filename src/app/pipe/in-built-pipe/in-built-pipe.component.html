@@ -1,0 +1,27 @@
+<h3 [style.color]="'red'">Pipe Operator </h3>
+<b>1. uppercase </b>
+<p>{{message | uppercase}} </p>
+<p>{{company.owner.name | uppercase}} </p>
+
+<b>2. lowercase </b>
+<p>{{"TTTTTT" | lowercase}} </p>
+
+<b>3. date:'fullDate' </b>
+<p>{{person.dob | date:'fullDate'}} </p>
+
+<b>4. Pipe Chaining </b>
+<p>{{person.dob | date:'fullDate' | uppercase}} </p>
+
+<b> 5. jsonPipe with Objects</b>
+<p>{{company | json}} </p> 
+
+<b> 6. jsonPipe with Array</b>
+<p>{{myArray }} </p> 
+
+<b> 7. Decimal Pipe</b>
+<p>{{num1 | number:'3.2-5'}} </p> 
+
+<b> 8. Safe Navigation OPerator </b>
+<p>{{company?.compname}} </p> 
+<p>{{company?.owner.name}} </p> 
+

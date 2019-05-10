@@ -1,0 +1,17 @@
+<p>
+  content-child works!
+</p>
+
+<div class="heading">
+  <ng-content select="h1"></ng-content>
+</div>
+<div class="body">
+  <ng-content select="div"></ng-content>
+</div>
+<div class="footer">
+  <ng-content></ng-content>
+</div>
+
+<ng-content select=".mobiles"></ng-content>
+<ng-content select=".smarttv"></ng-content>
+<ng-content select="[id=myId]"></ng-content>

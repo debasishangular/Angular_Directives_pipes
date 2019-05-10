@@ -1,0 +1,88 @@
+<b> *ngFor Demo</b>
+<ul>
+ <li *ngFor="let user of users; let i = index">
+  Row {{i}} : {{user.name}} - {{user.age}}
+ </li>
+</ul>
+
+<b>ngClass</b>
+<div *ngFor="let user of users" [ngClass]="'one two'">
+  {{user.name}}
+</div>  
+
+<b>ngClass with Array</b>
+<p [ngClass]="['one', 'two']">
+  Using NgClass with Array.
+  </p>  <br>
+
+  <b [style.color]="'red'">ngClass with Component Method</b>
+  <div [ngClass]="getCSSClasses('nightMode')">
+    Using NgClass with Component Method.
+   </div> <br>
+
+   <b [style.color]="'red'">ngSwitch</b>
+   <ul [ngSwitch]="person">
+    <li *ngSwitchCase="'Mohan'">Hello Mohan</li>
+    <li *ngSwitchCase="'Sohan'">Hello Sohan</li>
+    <li *ngSwitchCase="'Vijay'">Hello Vijay</li>
+    <li *ngSwitchDefault>Bye Bye</li>
+  </ul>
+
+  <div [ngSwitch]="myDir">
+    <b *ngSwitchCase="dirEnum.East"> East Direction</b>
+    <b *ngSwitchCase="dirEnum.West"> West Direction</b>
+    <b *ngSwitchCase="dirEnum.North">North Direction</b>
+    <b *ngSwitchCase="dirEnum.South">South Direction</b>
+    <b *ngSwitchDefault>No Direction</b>
+  </div><br>
+
+  <b [style.color]="'red'">*ngIf</b>
+
+  
+
+  <div *ngFor="let id of ids" >
+    Id is {{id}}
+    <div *ngIf="id%2 == 0">
+    <div [ngClass]="'one'">Even Number</div>
+    </div> 	
+    <div *ngIf="id%2 == 1">
+    <div [ngClass]="'two'">Odd Number</div>
+    </div> 	
+  </div>  
+  
+  <h3 [style.color]="'red'">Using NgIf with Else</h3>
+<b>Example-1:</b><br/><br/>
+<div>
+  <input type="radio" name="rad2" (click)= "changeValueforIfElse(true)"> True
+  <input type="radio" name="rad2" (click)= "changeValueforIfElse(false)"> False
+</div>
+<div *ngIf="isValidForIfElse; else elseBlock">
+   <b>Data is valid.</b>
+</div>   
+<ng-template #elseBlock>
+  <div>
+   <b>Data is invalid.</b>
+  </div> 
+</ng-template>
+
+<h3 [style.color]="'red'">Using NgIf with Then and Else</h3>
+<b>Example-1:</b><br/><br/>
+<div>
+  <input type="radio" name="rad3"  (click)= "changeValueForIfThenElse(true)"> True
+  <input type="radio" name="rad3" (click)= "changeValueForIfThenElse(false)"> False
+</div>
+<div *ngIf="isValidForIfThenElse; then thenBlock; else else1Block"> </div>
+<ng-template #thenBlock>
+  <div>   <b>Then block Data</b>   </div> 
+</ng-template>
+<ng-template #else1Block>
+  <div>   <b>Else block Data.</b>   </div> 
+</ng-template>
+
+<h3 [style.color]="'red'">Custom Attribute Based Directive</h3>
+<p appMycolor inputColor="green"> custom Attribute Directive Demo</p>
+
+<h3 [style.color]="'red'">Custom Attribute Based Directive with events</h3>
+<p appMouseaction> mouseAction Directive Demo</p> 
+
+<b [style.color]="'red'">*ngIf- custom Structural Directive</b>
